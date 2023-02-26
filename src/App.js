@@ -19,6 +19,11 @@ function App() {
         </div>
       </div>
 
+      {/* alert */}
+      <div className="flex justify-center items-center w-full h-20 bg-gradient-to-r from-rose-700 via-violet-500 to-sky-300">
+        <h4 className="text-lg underline">Claim 3 new tokens now</h4>
+      </div>
+
       {/* message */}
       <div className="flex justify-center w-full mt-16">
         <h4 className="max-w-4xl text-4xl text-center">
