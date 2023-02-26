@@ -4,6 +4,7 @@ import { LoginIcon } from "./icons/login";
 function App() {
   return (
     <div className="">
+      {/* topbar */}
       <div className="flex flex-row flex-nowrap justify-between items-center h-20 px-14 border-b border-slate-500">
         <div className="flex flex-row flex-nowrap justify-between items-center gap-10">
           <img src={logo} alt="Sygnum" className="h-5 w-auto" />
@@ -15,6 +16,14 @@ function App() {
           <LoginIcon />
           <span>Connect</span>
         </div>
+      </div>
+
+      {/* message */}
+      <div className="flex justify-center w-full mt-24">
+        <h4 className="max-w-4xl text-4xl text-center">
+          <span className="text-rose-700">Connect</span> to see <br />
+          your ranking
+        </h4>
       </div>
     </div>
   );
