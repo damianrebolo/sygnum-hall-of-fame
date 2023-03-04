@@ -1,4 +1,4 @@
-export const Alert = ({ children }) => (
+export const Alert: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ children }) => (
   <div className="flex justify-center items-center w-full h-20 bg-gradient-to-r from-rose-700 via-violet-500 to-sky-300">
     {children}
   </div>

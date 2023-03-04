@@ -1,4 +1,4 @@
-export const LoginIcon = () => (
+export const LoginIcon: React.FC = () => (
   <svg
     width="20"
     height="18"

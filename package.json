@@ -38,6 +38,12 @@
   },
   "devDependencies": {
     "@graphprotocol/client-cli": "^2.2.19",
-    "tailwindcss": "^3.2.7"
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5"
   }
 }

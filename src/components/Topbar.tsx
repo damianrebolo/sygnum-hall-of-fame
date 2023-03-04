@@ -1,7 +1,7 @@
 import logo from "../images/sygnum.png";
 import { LoginIcon } from "../icons/login";
 
-export const Topbar = () => (
+export const Topbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = () => (
   <div className="flex flex-row flex-nowrap justify-between items-center h-20 px-14 border-b border-slate-500">
     <div className="flex flex-row flex-nowrap justify-between items-center gap-10">
       <img src={logo} alt="Sygnum" className="h-5 w-auto" />
