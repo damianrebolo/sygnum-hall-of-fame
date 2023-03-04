@@ -1,0 +1,8 @@
+query Table {
+  users {
+    id
+    tokens {
+      amount
+    }
+  }
+}
