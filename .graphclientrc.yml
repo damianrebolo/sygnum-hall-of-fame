@@ -1,0 +1,8 @@
+sources:
+  - name: halloffame
+    handler:
+      graphql:
+        endpoint: https://api.thegraph.com/subgraphs/name/specialist-k/secondaries
+
+documents:
+  - ./src/table.graphql
