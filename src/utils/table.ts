@@ -11,7 +11,7 @@ export const cutAddress = (address: string) =>
 
 const mapReducedData = (item: ITable, idx: number) => ({
   rank: idx + 1,
-  address: cutAddress(item.address),
+  address: item.address,
   tokens: item.tokens,
 });
 
@@ -29,4 +29,8 @@ export const reduceDataTable = (data: TableQuery): ITable[] => {
     )
     .sort((a, b) => b.tokens - a.tokens)
     .map(mapReducedData);
+};
+
+export const getUserRow = (data: ITable[], address: string | undefined) => {
+  return data.find((item) => item.address === address);
 };
