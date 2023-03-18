@@ -6,10 +6,10 @@ import { getUserRow, reduceDataTable } from "../../utils";
 
 const sdk = getBuiltGraphSDK();
 
-export const useTable = () => {
+export const useUsers = () => {
   const address = useAddress();
 
-  const result = useQuery("TableQuery", () => sdk.Table());
+  const result = useQuery("UsersQuery", () => sdk.Users());
 
   const { data, isLoading, error } = result;
   const tableData = data ? reduceDataTable(data) : undefined;
