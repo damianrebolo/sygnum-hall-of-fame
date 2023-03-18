@@ -16,17 +16,22 @@ export const TableMessages = (address: string | undefined, userRow: IUser | unde
     );
   } else if (address && userRow) {
     return (
-      <h4 className="max-w-4xl text-4xl text-center">
-        You're in <span className="text-rose-700">position {userRow.rank}</span> and <br />
-        have collected <span className="text-rose-700">{userRow.tokens} tokens</span>
-      </h4>
+      <p className="flex flex-col gap-3 max-w-4xl text-4xl text-center">
+        <span>
+          You're in <span className="text-rose-700">position {userRow.rank}</span> and
+        </span>
+        <span>
+          have collected <span className="text-rose-700">{userRow.tokens} tokens</span>
+        </span>
+      </p>
     );
   }
-
   return (
-    <h4 className="max-w-4xl text-4xl text-center">
-      <span className="text-rose-700">Connect</span> to see <br />
-      your ranking
-    </h4>
+    <p className="flex flex-col gap-3 max-w-4xl text-4xl text-center">
+      <span>
+        <span className="text-rose-700">Connect</span> to see
+      </span>
+      <span>your ranking</span>
+    </p>
   );
 };
