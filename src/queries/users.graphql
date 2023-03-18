@@ -1,6 +1,7 @@
-query Table {
+query Users {
   users {
     id
+    canClaim
     tokens {
       amount
     }

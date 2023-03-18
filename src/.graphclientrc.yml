@@ -5,4 +5,4 @@ sources:
         endpoint: https://api.thegraph.com/subgraphs/name/specialist-k/secondaries
 
 documents:
-  - ./queries/table.graphql
+  - ./queries/users.graphql

@@ -266,6 +266,7 @@ export type Token_orderBy =
 export type User = {
   id: Scalars['ID'];
   tokens: Array<UserToken>;
+  canClaim: Scalars['Boolean'];
 };
 
 
@@ -357,6 +358,7 @@ export type UserToken_orderBy =
   | 'token__total'
   | 'owner'
   | 'owner__id'
+  | 'owner__canClaim'
   | 'amount';
 
 export type User_filter = {
@@ -369,6 +371,10 @@ export type User_filter = {
   id_in?: InputMaybe<Array<Scalars['ID']>>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   tokens_?: InputMaybe<UserToken_filter>;
+  canClaim?: InputMaybe<Scalars['Boolean']>;
+  canClaim_not?: InputMaybe<Scalars['Boolean']>;
+  canClaim_in?: InputMaybe<Array<Scalars['Boolean']>>;
+  canClaim_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
   /** Filter for the block changed event. */
   _change_block?: InputMaybe<BlockChangedFilter>;
   and?: InputMaybe<Array<InputMaybe<User_filter>>>;
@@ -377,7 +383,8 @@ export type User_filter = {
 
 export type User_orderBy =
   | 'id'
-  | 'tokens';
+  | 'tokens'
+  | 'canClaim';
 
 export type _Block_ = {
   /** The hash of the block */
@@ -604,6 +611,7 @@ export type TokenResolvers<ContextType = MeshContext, ParentType extends Resolve
 export type UserResolvers<ContextType = MeshContext, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = ResolversObject<{
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   tokens?: Resolver<Array<ResolversTypes['UserToken']>, ParentType, ContextType, RequireFields<UsertokensArgs, 'skip' | 'first'>>;
+  canClaim?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -728,11 +736,11 @@ const merger = new(BareMerger as any)({
     get documents() {
       return [
       {
-        document: TableDocument,
+        document: UsersDocument,
         get rawSDL() {
-          return printWithCache(TableDocument);
+          return printWithCache(UsersDocument);
         },
-        location: 'TableDocument.graphql'
+        location: 'UsersDocument.graphql'
       }
     ];
     },
@@ -771,32 +779,33 @@ export function getBuiltGraphSDK<TGlobalContext = any, TOperationContext = any>(
   const sdkRequester$ = getBuiltGraphClient().then(({ sdkRequesterFactory }) => sdkRequesterFactory(globalContext));
   return getSdk<TOperationContext, TGlobalContext>((...args) => sdkRequester$.then(sdkRequester => sdkRequester(...args)));
 }
-export type TableQueryVariables = Exact<{ [key: string]: never; }>;
+export type UsersQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type TableQuery = { users: Array<(
-    Pick<User, 'id'>
+export type UsersQuery = { users: Array<(
+    Pick<User, 'id' | 'canClaim'>
     & { tokens: Array<Pick<UserToken, 'amount'>> }
   )> };
 
 
-export const TableDocument = gql`
-    query Table {
-  users {
-    id
-    tokens {
-      amount
+export const UsersDocument = gql`
+query Users {
+    users {
+      id
+      canClaim
+      tokens {
+        amount
+      }
     }
-  }
 }
-    ` as unknown as DocumentNode<TableQuery, TableQueryVariables>;
+    ` as unknown as DocumentNode<UsersQuery, UsersQueryVariables>;
 
 
 export type Requester<C = {}, E = unknown> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R> | AsyncIterable<R>
 export function getSdk<C, E>(requester: Requester<C, E>) {
   return {
-    Table(variables?: TableQueryVariables, options?: C): Promise<TableQuery> {
-      return requester<TableQuery, TableQueryVariables>(TableDocument, variables, options) as Promise<TableQuery>;
+    Users(variables?: UsersQueryVariables, options?: C): Promise<UsersQuery> {
+      return requester<UsersQuery, UsersQueryVariables>(UsersDocument, variables, options) as Promise<UsersQuery>;
     }
   };
 }

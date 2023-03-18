@@ -245,6 +245,7 @@ export type Token_orderBy =
 export type User = {
   id: Scalars['ID'];
   tokens: Array<UserToken>;
+  canClaim: Scalars['Boolean'];
 };
 
 
@@ -336,6 +337,7 @@ export type UserToken_orderBy =
   | 'token__total'
   | 'owner'
   | 'owner__id'
+  | 'owner__canClaim'
   | 'amount';
 
 export type User_filter = {
@@ -348,6 +350,10 @@ export type User_filter = {
   id_in?: InputMaybe<Array<Scalars['ID']>>;
   id_not_in?: InputMaybe<Array<Scalars['ID']>>;
   tokens_?: InputMaybe<UserToken_filter>;
+  canClaim?: InputMaybe<Scalars['Boolean']>;
+  canClaim_not?: InputMaybe<Scalars['Boolean']>;
+  canClaim_in?: InputMaybe<Array<Scalars['Boolean']>>;
+  canClaim_not_in?: InputMaybe<Array<Scalars['Boolean']>>;
   /** Filter for the block changed event. */
   _change_block?: InputMaybe<BlockChangedFilter>;
   and?: InputMaybe<Array<InputMaybe<User_filter>>>;
@@ -356,7 +362,8 @@ export type User_filter = {
 
 export type User_orderBy =
   | 'id'
-  | 'tokens';
+  | 'tokens'
+  | 'canClaim';
 
 export type _Block_ = {
   /** The hash of the block */
