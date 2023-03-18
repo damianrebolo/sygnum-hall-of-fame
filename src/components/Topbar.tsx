@@ -21,7 +21,7 @@ export const Topbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = () => {
         className="flex flex-row flex-nowrap justify-center items-center gap-3 py-3 px-5 border border-pink-600 rounded-[4px] bg-pink-600 bg-opacity-[15%]"
       >
         <LoginIcon />
-        <span>{address ? "Disconnect" : "Connect"}</span>
+        <span className="text-lg font-mono">{address ? "Disconnect" : "Connect"}</span>
       </button>
     </div>
   );
