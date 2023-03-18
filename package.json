@@ -1,7 +1,7 @@
 {
   "name": "sygnum-hall-of-fame",
   "version": "0.1.0",
-  "homepage": "https://damianrebolo.github.io/shof",
+  "homepage": "https://damianrebolo.github.io/sygnum-hall-of-fame",
   "private": true,
   "dependencies": {
     "@thirdweb-dev/react": "^3.9.0",
