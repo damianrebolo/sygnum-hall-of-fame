@@ -4,3 +4,4 @@ export * from "./Alert";
 export * from "./Message";
 export * from "./Carousel";
 export * from "./MismatchAlert";
+export * from "./DotSnakeAnimation";

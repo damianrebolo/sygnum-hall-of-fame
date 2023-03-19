@@ -1,4 +1,4 @@
-import { Message, MismatchAlert, Table, Topbar } from "./components";
+import { DotSnakeAnimation, Message, MismatchAlert, Table, Topbar } from "./components";
 import { ClaimTokens } from "./components/ClaimTokens/ClaimTokens";
 import { TableMessages } from "./components/Table/TableMessages";
 import { useUsers } from "./components/Table/useUsers";
@@ -9,6 +9,7 @@ function App() {
 
   return (
     <div className="">
+      <DotSnakeAnimation />
       <MismatchAlert />
       <Topbar />
       {userRow?.canClaim && <ClaimTokens />}
