@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/sygnum-hall-of-fame/static/css/main.abf32e3d.css",
-    "main.js": "/sygnum-hall-of-fame/static/js/main.3eaee0ca.js",
+    "main.css": "/sygnum-hall-of-fame/static/css/main.39829d81.css",
+    "main.js": "/sygnum-hall-of-fame/static/js/main.4ab241fd.js",
     "static/js/631.37b5c367.chunk.js": "/sygnum-hall-of-fame/static/js/631.37b5c367.chunk.js",
     "static/js/922.4cef2b57.chunk.js": "/sygnum-hall-of-fame/static/js/922.4cef2b57.chunk.js",
     "static/js/44.239872e6.chunk.js": "/sygnum-hall-of-fame/static/js/44.239872e6.chunk.js",
@@ -37,8 +37,8 @@
     "static/js/399.e6fef0f5.chunk.js": "/sygnum-hall-of-fame/static/js/399.e6fef0f5.chunk.js",
     "static/media/PressStart2P-Regular.ttf": "/sygnum-hall-of-fame/static/media/PressStart2P-Regular.21503c6a5385ab41dde9.ttf",
     "index.html": "/sygnum-hall-of-fame/index.html",
-    "main.abf32e3d.css.map": "/sygnum-hall-of-fame/static/css/main.abf32e3d.css.map",
-    "main.3eaee0ca.js.map": "/sygnum-hall-of-fame/static/js/main.3eaee0ca.js.map",
+    "main.39829d81.css.map": "/sygnum-hall-of-fame/static/css/main.39829d81.css.map",
+    "main.4ab241fd.js.map": "/sygnum-hall-of-fame/static/js/main.4ab241fd.js.map",
     "631.37b5c367.chunk.js.map": "/sygnum-hall-of-fame/static/js/631.37b5c367.chunk.js.map",
     "922.4cef2b57.chunk.js.map": "/sygnum-hall-of-fame/static/js/922.4cef2b57.chunk.js.map",
     "531.e709acb0.chunk.js.map": "/sygnum-hall-of-fame/static/js/531.e709acb0.chunk.js.map",
@@ -57,7 +57,7 @@
     "399.e6fef0f5.chunk.js.map": "/sygnum-hall-of-fame/static/js/399.e6fef0f5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abf32e3d.css",
-    "static/js/main.3eaee0ca.js"
+    "static/css/main.39829d81.css",
+    "static/js/main.4ab241fd.js"
   ]
 }
