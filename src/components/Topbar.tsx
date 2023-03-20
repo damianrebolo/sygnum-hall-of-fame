@@ -18,7 +18,7 @@ export const Topbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = () => {
       </div>
       <button
         onClick={address ? disconnect : connectWithMetamask}
-        className="w-44 flex flex-row flex-nowrap justify-start items-center gap-3 py-3 px-5 border border-pink-600 rounded-[4px] bg-pink-600 hover:bg-pink-700 bg-opacity-[15%]"
+        className="flex flex-row flex-nowrap justify-start items-center gap-3 py-3 px-5 border border-pink-600 rounded-[4px] bg-pink-600 hover:bg-pink-700 bg-opacity-[15%]"
       >
         <LoginIcon />
         <span className="text-lg font-mono">{address ? "Disconnect" : "Connect"}</span>
