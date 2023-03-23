@@ -13,7 +13,7 @@ export const useUsers = () => {
 
   const { data, isLoading, error } = result;
   const tableData = data ? reduceDataTable(data) : undefined;
-  const userRow = tableData && address ? getUserRow(tableData, address) : undefined;
+  const userRow = tableData && address ? getUserRow(tableData, address?.toLowerCase()) : undefined;
 
   return { data: tableData, isLoading, error, address, userRow };
 };
