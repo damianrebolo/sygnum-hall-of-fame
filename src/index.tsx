@@ -11,7 +11,7 @@ const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <QueryClientProvider client={queryClient}>
-    <ThirdwebProvider activeChain={Polygon}>
+    <ThirdwebProvider walletConnectors={["metamask", "walletConnect"]} activeChain={Polygon}>
       <App />
     </ThirdwebProvider>
   </QueryClientProvider>
