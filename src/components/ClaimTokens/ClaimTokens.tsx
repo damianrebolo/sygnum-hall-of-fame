@@ -1,11 +1,12 @@
 import { useAddress } from "@thirdweb-dev/react";
 import { useContractWrite, useContract } from "@thirdweb-dev/react";
-
 import { Alert } from "../Alert";
+
+import abi from "../../abi.json";
 
 export const ClaimTokens = () => {
   const address = useAddress();
-  const { contract } = useContract("0x88e74675186c02a75481FaC552c7Db03f4DC849e");
+  const { contract } = useContract("0x88e74675186c02a75481FaC552c7Db03f4DC849e", abi.abi);
   const { mutateAsync } = useContractWrite(contract, "mint");
 
   const onClaimTokens = () => {
