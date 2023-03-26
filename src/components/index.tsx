@@ -6,3 +6,4 @@ export * from "./Carousel";
 export * from "./MismatchAlert";
 export * from "./Layout";
 export * from "./SnakeGame";
+export * from "./StarAnimation";

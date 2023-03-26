@@ -1,6 +1,6 @@
 import { SnakeGame, Message, MismatchAlert, Table, Topbar, Layout } from "./components";
 import { ClaimTokens } from "./components/ClaimTokens/ClaimTokens";
-import StarAnimation from "./components/StarAnimation";
+import { StarAnimation } from "./components";
 import { TableMessages } from "./components/Table/TableMessages";
 import { useUsers } from "./components/Table/useUsers";
 import { cutAddress, IUser } from "./utils";
@@ -12,8 +12,8 @@ function App() {
     <>
       <SnakeGame topOffset={80} position="left_bottom" />
       <SnakeGame topOffset={80} position="right_top" />
+      <StarAnimation />
       <Layout>
-        {/* <StarAnimation /> */}
         <MismatchAlert />
         <Topbar />
         {userRow?.canClaim && <ClaimTokens />}
