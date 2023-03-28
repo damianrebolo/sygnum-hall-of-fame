@@ -10,8 +10,8 @@ function App() {
 
   return (
     <>
-      <SnakeGame topOffset={80} position="left_bottom" />
-      <SnakeGame topOffset={80} position="right_top" />
+      {/* <SnakeGame topOffset={80} position="left_bottom" />
+      <SnakeGame topOffset={80} position="right_top" /> */}
       <StarAnimation />
       <Layout>
         <MismatchAlert />
