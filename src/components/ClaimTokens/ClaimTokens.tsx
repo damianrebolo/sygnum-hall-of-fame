@@ -2,7 +2,7 @@ import { useAddress } from "@thirdweb-dev/react";
 import { useContractWrite, useContract } from "@thirdweb-dev/react";
 import { Alert } from "../Alert";
 
-import abi from "../../abi.json";
+import abi from "../../assets/abi.json";
 
 export const ClaimTokens = () => {
   const address = useAddress();
@@ -10,7 +10,7 @@ export const ClaimTokens = () => {
   const { mutateAsync } = useContractWrite(contract, "mint");
 
   const onClaimTokens = () => {
-    mutateAsync({args:[address]})
+    mutateAsync({ args: [address] })
       .then(() => console.log("Tokens Claimed"))
       .catch(() => console.error("Error claiming tokens"));
   };

@@ -6,7 +6,7 @@
   @font-face {
     font-family: "press";
     font-weight: 400;
-    src: url("./fonts/PressStart2P-Regular.ttf");
+    src: url("./assets/fonts/PressStart2P-Regular.ttf");
   }
 
   body {

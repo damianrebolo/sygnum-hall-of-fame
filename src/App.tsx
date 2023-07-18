@@ -1,17 +1,14 @@
-import { SnakeGame, Message, MismatchAlert, Table, Topbar, Layout } from "./components";
+import { Message, MismatchAlert, Table, Topbar, Layout } from "./components";
 import { ClaimTokens } from "./components/ClaimTokens/ClaimTokens";
 import { StarAnimation } from "./components";
 import { TableMessages } from "./components/Table/TableMessages";
 import { useUsers } from "./components/Table/useUsers";
 import { cutAddress, IUser } from "./utils";
-
 function App() {
   const { data, address, userRow } = useUsers();
 
   return (
     <>
-      {/* <SnakeGame topOffset={80} position="left_bottom" />
-      <SnakeGame topOffset={80} position="right_top" /> */}
       <StarAnimation />
       <Layout>
         <MismatchAlert />
@@ -28,7 +25,7 @@ function App() {
                   : "bg-gradient-to-b from-blue-600 to-blue-400"
               }`}
             >
-              <div className="col-span-3 leading-5">{`${item.rank}.`}</div>
+              <div className="col-span-3 leading-5">{`${item.rank || 0}.`}</div>
               <div className="col-span-6 leading-5">{cutAddress(item.address)}</div>
               <div className="col-span-3 leading-5">{item.tokens}</div>
             </div>
@@ -36,7 +33,7 @@ function App() {
         </Table>
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,6 +1,6 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 
-import logo from "../images/sygnum.png";
+import logo from "../assets/images/sygnum.png";
 
 export const Topbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = () => {
   return (
@@ -11,10 +11,7 @@ export const Topbar: React.FC<React.HTMLAttributes<HTMLDivElement>> = () => {
           Hall Of Fame
         </h1>
       </div>
-      <ConnectWallet
-        btnTitle="Connect"
-        className="!border !border-pink-600 !rounded-[4px] focus:after:!border-0 !bg-pink-600 !hover:bg-pink-700 !bg-opacity-[15%]"
-      />
+      <ConnectWallet btnTitle="Connect" />
     </div>
   );
 };
