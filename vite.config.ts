@@ -21,7 +21,5 @@ export default defineConfig({
       protocolImports: true,
     }),
   ],
-  build: {
-    outDir: "build",
-  },
+  base: "/sygnum-hall-of-fame/",
 });
