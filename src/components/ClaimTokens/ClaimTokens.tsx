@@ -10,7 +10,7 @@ export const ClaimTokens = () => {
   const { mutateAsync } = useContractWrite(contract, "mint");
 
   const onClaimTokens = () => {
-    mutateAsync([address])
+    mutateAsync({args:[address]})
       .then(() => console.log("Tokens Claimed"))
       .catch(() => console.error("Error claiming tokens"));
   };
