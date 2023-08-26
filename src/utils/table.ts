@@ -8,7 +8,7 @@ export interface IUser {
 }
 
 export const cutAddress = (address: string) =>
-  `${address?.substring(0, 6)}...${address?.substring(address?.length - 4)}`;
+  `${address?.substring(0, 6)}...${address?.substring(address?.length - 2)}`;
 
 const mapReducedData = ({ address, canClaim, tokens }: IUser, idx: number) => ({
   rank: idx + 1,
