@@ -1,4 +1,4 @@
-import { Message, MismatchAlert, Table, Topbar, Layout, SnakeGame } from "./components";
+import { Message, MismatchAlert, Table, Topbar, Layout } from "./components";
 import { ClaimTokens } from "./components/ClaimTokens/ClaimTokens";
 import { StarAnimation } from "./components";
 import { TableMessages } from "./components/Table/TableMessages";
